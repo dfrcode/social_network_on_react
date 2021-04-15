@@ -1,38 +1,100 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  width: 100%;
+  height: 70px;
+  border: 1px solid #ddd;
+}
+
+.img-logo {
+  cursor: pointer;
+  width: 100px;
+}
+
+.container {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  width: 100%;
+  height: calc(100vh - 70px);
 }
 
-.App-link {
-  color: #61dafb;
+.nav {
+  width: 200px;
+  height: 100%;
+  border-right: 1px solid #ddd;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-list {
+  list-style: none;
+}
+
+.nav-list-item {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid #ddd;
+}
+
+.content {
+  overflow: hidden;
+  width: calc(100% - 200px);
+  height: 100%;
+  background-color: #f5f5f5;
+}
+
+.head-profile {
+  overflow: hidden;
+  width: 100%;
+  height: 150px;
+}
+
+.img-head {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+}
+
+.ava {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  height: 130px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  box-shadow: 3px 3px 7px #ddd;
+}
+
+.img-avatar {
+  width: 90%;
+  border-radius: 50%;
+}
+
+.description {
+  width: calc(100% - 130px);
+  height: 130px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  box-shadow: 3px 3px 7px #ddd;
 }
