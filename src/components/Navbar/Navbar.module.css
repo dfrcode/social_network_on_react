@@ -19,6 +19,11 @@
   transition: background-color 0.2s linear;
 }
 
+.item.active {
+  color: #ffffff;
+  background-color:rgb(240, 240, 240)
+}
+
 .item:hover {
   background-color: rgb(240, 240, 240);
 }

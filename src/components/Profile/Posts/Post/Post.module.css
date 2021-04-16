@@ -1,0 +1,21 @@
+.item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  background-color: #ddd;
+  transition: background-color 0.3s linear;
+}
+
+.item:hover {
+  background-color: rgb(190, 184, 184);
+}
+
+.avatar {
+  margin-right: 10px;
+  width: 50px;
+  border-radius: 50%;
+}
