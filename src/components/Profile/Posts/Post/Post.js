@@ -1,14 +1,15 @@
 import React from "react";
 import styles from "./Post.module.css";
 
-const Post = () => {
+const Post = (props) => {
+
   return (
     <div className={styles.item}>
       <img
         className={styles.avatar}
-        src="https://pixelbox.ru/wp-content/uploads/2020/12/ava-vk-cats-92.jpg"
+        src="https://games.mail.ru/hotbox/content_files/gallery/2020/12/11/d49a024e7ade40858a10df3b8976625d.png"
       />
-      <p>post1</p>
+      <p>{ props.message }</p>
     </div>
   );
 };
