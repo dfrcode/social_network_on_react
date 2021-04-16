@@ -15,8 +15,8 @@ const Posts = () => {
         <input className={styles.btn_posts} type="button" value="Send" />
       </div>
       <div className={styles.posts}>
-        <Post message="Hi, how are you!?"/>
-        <Post message="It is my first post"/>
+        <Post message="Hi, how are you!?" likes="15"/>
+        <Post message="It is my first post" likes="20"/>
       </div>
     </div>
   );
