@@ -4,7 +4,7 @@ import Posts from "./Posts/Posts";
 
 const Profile = () => {
   return (
-    <div className="content">
+    <div>
       <div className={styles.header}>
         <img
           className={styles.img_header}
