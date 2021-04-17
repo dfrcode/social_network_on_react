@@ -1,0 +1,39 @@
+.dialogs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.dialogs_items {
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 200px;
+    height: 100%;
+    border-right: 1px solid #ddd;
+}
+
+.item {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #ddd;
+}
+
+.messages {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: calc(100% - 200px);
+    height: 100%;
+}
+
+.message {
+    width: 100%;
+    padding: 10px;
+}

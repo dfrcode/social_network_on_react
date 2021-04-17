@@ -1,5 +1,6 @@
 import React from "react";
 import Post from "./Post/Post";
+import { postsData } from "./postsData";
 import styles from "./Posts.module.css";
 
 const Posts = () => {
@@ -15,8 +16,9 @@ const Posts = () => {
         <input className={styles.btn_posts} type="button" value="Send" />
       </div>
       <div className={styles.posts}>
-        <Post message="Hi, how are you!?" likes="15"/>
-        <Post message="It is my first post" likes="20"/>
+        {postsData.map((post) => (
+          <Post key={post.id} message={post.message} likes={post.likes} />
+        ))}
       </div>
     </div>
   );
