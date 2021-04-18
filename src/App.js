@@ -10,13 +10,13 @@ import Settings from "./components/Settings/Settings";
 
 import "./App.css";
 
-const profileComponent = () => {
-  return <Profile />;
-};
+// const profileComponent = () => {
+//   return <Profile />;
+// };
 
-const dialogsComponent = () => {
-  return <Dialogs />;
-};
+// const dialogsComponent = () => {
+//   return <Dialogs />;
+// };
 
 const newsComponent = () => {
   return <News />;
@@ -30,7 +30,7 @@ const settingsComponent = () => {
   return <Settings />;
 };
 
-const App = () => {
+const App = (props) => {
   return (
     <BrowserRouter>
       <div>
@@ -38,8 +38,14 @@ const App = () => {
         <div className="container">
           <Navbar />
           <div className="content">
-            <Route path="/profile" render={profileComponent} />
-            <Route path="/dialogs" render={dialogsComponent} />
+            <Route
+              path="/profile"
+              render={() => <Profile postsData={props.postsData} />}
+            />
+            <Route
+              path="/dialogs"
+              render={() => <Dialogs dialogsData={props.dialogsData} messagesData={props.messagesData} />}
+            />
             <Route path="/news" render={newsComponent} />
             <Route path="/musics" render={musicComponent} />
             <Route path="/settings" render={settingsComponent} />

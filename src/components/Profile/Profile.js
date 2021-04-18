@@ -2,7 +2,8 @@ import React from "react";
 import styles from "./Profile.module.css";
 import Posts from "./Posts/Posts";
 
-const Profile = () => {
+const Profile = (props) => {
+
   return (
     <div>
       <div className={styles.header}>
@@ -34,7 +35,7 @@ const Profile = () => {
           </p>
         </div>
       </div>
-      <Posts />
+      <Posts postsData={props.postsData}/>
     </div>
   );
 };
