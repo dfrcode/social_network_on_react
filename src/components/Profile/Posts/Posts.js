@@ -1,6 +1,5 @@
 import React from "react";
 import Post from "./Post/Post";
-// import { postsData } from "./postsData";
 import styles from "./Posts.module.css";
 
 const Posts = (props) => {

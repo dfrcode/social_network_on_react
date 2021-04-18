@@ -10,14 +10,6 @@ import Settings from "./components/Settings/Settings";
 
 import "./App.css";
 
-// const profileComponent = () => {
-//   return <Profile />;
-// };
-
-// const dialogsComponent = () => {
-//   return <Dialogs />;
-// };
-
 const newsComponent = () => {
   return <News />;
 };
