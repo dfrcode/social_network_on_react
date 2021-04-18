@@ -10,6 +10,26 @@ import Settings from "./components/Settings/Settings";
 
 import "./App.css";
 
+const profileComponent = () => {
+  return <Profile />;
+};
+
+const dialogsComponent = () => {
+  return <Dialogs />;
+};
+
+const newsComponent = () => {
+  return <News />;
+};
+
+const musicComponent = () => {
+  return <Music />;
+};
+
+const settingsComponent = () => {
+  return <Settings />;
+};
+
 const App = () => {
   return (
     <BrowserRouter>
@@ -18,11 +38,11 @@ const App = () => {
         <div className="container">
           <Navbar />
           <div className="content">
-            <Route path="/profile" component={Profile} />
-            <Route path="/dialogs" component={Dialogs} />
-            <Route path="/news" component={News} />
-            <Route path="/musics" component={Music} />
-            <Route path="/settings" component={Settings} />
+            <Route path="/profile" render={profileComponent} />
+            <Route path="/dialogs" render={dialogsComponent} />
+            <Route path="/news" render={newsComponent} />
+            <Route path="/musics" render={musicComponent} />
+            <Route path="/settings" render={settingsComponent} />
           </div>
         </div>
       </div>
