@@ -1,60 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-
-const postsData = [
-  {
-    id: 1,
-    message: "Hi, how are you!?",
-    likes: 15,
-  },
-  {
-    id: 2,
-    message: "It is my first post",
-    likes: 20,
-  },
-];
-
-const dialogsData = [
-  {
-    id: 1,
-    name: "James",
-  },
-  {
-    id: 2,
-    name: "Jane",
-  },
-  {
-    id: 3,
-    name: "Kate",
-  },
-  {
-    id: 4,
-    name: "Ivan",
-  },
-  {
-    id: 5,
-    name: "Sasha",
-  },
-];
-
-const messagesData = [
-  {
-    id: 1,
-    message: "Hi",
-  },
-  {
-    id: 2,
-    message: "How are you?",
-  },
-];
+import React from "react";
+import ReactDOM from "react-dom";
+import state from "./state/state";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App postsData={postsData} dialogsData={dialogsData} messagesData={messagesData}/>
+    <App state={state} />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -32,11 +32,16 @@ const App = (props) => {
           <div className="content">
             <Route
               path="/profile"
-              render={() => <Profile postsData={props.postsData} />}
+              render={() => <Profile postsData={props.state.profilePage.postsData} />}
             />
             <Route
               path="/dialogs"
-              render={() => <Dialogs dialogsData={props.dialogsData} messagesData={props.messagesData} />}
+              render={() => (
+                <Dialogs
+                  dialogsData={props.state.messagesPage.dialogsData}
+                  messagesData={props.state.messagesPage.messagesData}
+                />
+              )}
             />
             <Route path="/news" render={newsComponent} />
             <Route path="/musics" render={musicComponent} />
