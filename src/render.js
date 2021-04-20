@@ -1,19 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import state from "./state/state";
 import { newPost } from "./state/state";
-import { rerenderTreeDom } from "./renders";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
-rerenderTreeDom(state);
-
-ReactDOM.render(
-  <React.StrictMode>
-    <App state={state} newPost={newPost} />
-  </React.StrictMode>,
-  document.getElementById("root")
-);
+export const rerenderTreeDom = (state) => {
+  ReactDOM.render(
+    <React.StrictMode>
+      <App state={state} newPost={newPost} />
+    </React.StrictMode>,
+    document.getElementById("root")
+  );
+};
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

@@ -1,3 +1,5 @@
+import { rerenderTreeDom } from "./../render";
+
 const state = {
   profilePage: {
     postsData: [
@@ -66,6 +68,7 @@ export const newPost = (message, likes = 0) => {
   };
 
   state.profilePage.postsData.push(newObj);
+  rerenderTreeDom(state);
 };
 
 export default state;
