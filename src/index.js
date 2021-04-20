@@ -1,12 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import state from "./state/state";
+import {newPost} from './state/state';
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App state={state} />
+    <App state={state} newPost={newPost}/>
   </React.StrictMode>,
   document.getElementById("root")
 );

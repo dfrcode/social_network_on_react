@@ -4,6 +4,8 @@ import Posts from "./Posts/Posts";
 
 const Profile = (props) => {
 
+  const { newPost, postsData } = props;
+
   return (
     <div>
       <div className={styles.header}>
@@ -35,7 +37,7 @@ const Profile = (props) => {
           </p>
         </div>
       </div>
-      <Posts postsData={props.postsData}/>
+      <Posts postsData={postsData} newPost={newPost}/>
     </div>
   );
 };

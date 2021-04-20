@@ -28,6 +28,10 @@ const friendsComponent = () => {
 };
 
 const App = (props) => {
+  const { newPost } = props;
+  const { postsData } = props.state.profilePage;
+  const { dialogsData, messagesData } = props.state.messagesPage;
+
   return (
     <BrowserRouter>
       <div>
@@ -37,14 +41,14 @@ const App = (props) => {
           <div className="content">
             <Route
               path="/profile"
-              render={() => <Profile postsData={props.state.profilePage.postsData} />}
+              render={() => <Profile postsData={postsData} newPost={newPost} />}
             />
             <Route
               path="/dialogs"
               render={() => (
                 <Dialogs
-                  dialogsData={props.state.messagesPage.dialogsData}
-                  messagesData={props.state.messagesPage.messagesData}
+                  dialogsData={dialogsData}
+                  messagesData={messagesData}
                 />
               )}
             />

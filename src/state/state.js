@@ -18,7 +18,8 @@ const state = {
       {
         id: 1,
         name: "James",
-        url: "https://www.ejin.ru/wp-content/uploads/2018/10/kartinki_volka_na_avu_04.jpg",
+        url:
+          "https://www.ejin.ru/wp-content/uploads/2018/10/kartinki_volka_na_avu_04.jpg",
       },
       {
         id: 2,
@@ -28,17 +29,20 @@ const state = {
       {
         id: 3,
         name: "Kate",
-        url: "https://ulibky.ru/wp-content/uploads/2019/10/avatarki_dlya_vatsap_dlya_devushek_42_28061027.jpg",
+        url:
+          "https://ulibky.ru/wp-content/uploads/2019/10/avatarki_dlya_vatsap_dlya_devushek_42_28061027.jpg",
       },
       {
         id: 4,
         name: "Ivan",
-        url: "https://pixelbox.ru/wp-content/uploads/2020/12/ava-vk-cats-70.jpg",
+        url:
+          "https://pixelbox.ru/wp-content/uploads/2020/12/ava-vk-cats-70.jpg",
       },
       {
         id: 5,
         name: "Sasha",
-        url: "https://pixelbox.ru/wp-content/uploads/2020/12/ava-vk-cats-90.jpg",
+        url:
+          "https://pixelbox.ru/wp-content/uploads/2020/12/ava-vk-cats-90.jpg",
       },
     ],
     messagesData: [
@@ -52,6 +56,16 @@ const state = {
       },
     ],
   },
+};
+
+export const newPost = (message, likes = 0) => {
+  const newObj = {
+    id: state.profilePage.postsData.length + 1,
+    message: message,
+    likes: likes,
+  };
+
+  state.profilePage.postsData.push(newObj);
 };
 
 export default state;
