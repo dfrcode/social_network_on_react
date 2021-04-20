@@ -1,9 +1,42 @@
-.item {
-  cursor: pointer;
+.link {
+  width: 100%;
+  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  color: #333;
+  text-decoration: none;
+  transition: background-color .2s linear;
+}
+
+.link:hover {
+  background-color: #fff;
+}
+
+.box_img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
   height: 50px;
-  border-bottom: 1px solid #ddd;
+}
+
+.item {
+  width: 150px;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.img {
+  width: 40px;
+  border-radius: 50%;
+}
+
+.name {
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

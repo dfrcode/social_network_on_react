@@ -7,6 +7,7 @@ import Dialogs from "./components/Dialogs/Dialogs";
 import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
+import Friends from "./components/Friends/Friends";
 
 import "./App.css";
 
@@ -20,6 +21,10 @@ const musicComponent = () => {
 
 const settingsComponent = () => {
   return <Settings />;
+};
+
+const friendsComponent = () => {
+  return <Friends />;
 };
 
 const App = (props) => {
@@ -46,6 +51,7 @@ const App = (props) => {
             <Route path="/news" render={newsComponent} />
             <Route path="/musics" render={musicComponent} />
             <Route path="/settings" render={settingsComponent} />
+            <Route path="/friends" render={friendsComponent} />
           </div>
         </div>
       </div>
