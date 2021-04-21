@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import state from "./state/state";
 import { newPost } from "./state/state";
-import { rerenderTreeDom } from "./renders";
+import { rerenderTreeDom } from "./render";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
