@@ -3,7 +3,6 @@ import styles from "./Profile.module.css";
 import Posts from "./Posts/Posts";
 
 const Profile = (props) => {
-
   const { newPost, postsData } = props;
 
   return (
@@ -37,7 +36,7 @@ const Profile = (props) => {
           </p>
         </div>
       </div>
-      <Posts postsData={postsData} newPost={newPost}/>
+        <Posts postsData={postsData} newPost={newPost} textValue={props.textValue} changeValue={props.changeValue}/>
     </div>
   );
 };

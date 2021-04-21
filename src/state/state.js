@@ -1,6 +1,8 @@
-import { rerenderTreeDom } from "./../render";
+let rerenderTreeDom = () => {
+  console.log("State changed");
+};
 
-const state = {
+let state = {
   profilePage: {
     postsData: [
       {
@@ -14,6 +16,7 @@ const state = {
         likes: 20,
       },
     ],
+    textValue: "your text...",
   },
   messagesPage: {
     dialogsData: [
@@ -60,8 +63,8 @@ const state = {
   },
 };
 
-export const newPost = (message, likes = 0) => {
-  const newObj = {
+export let newPost = (message, likes = 0) => {
+  let newObj = {
     id: state.profilePage.postsData.length + 1,
     message: message,
     likes: likes,
@@ -70,5 +73,14 @@ export const newPost = (message, likes = 0) => {
   state.profilePage.postsData.push(newObj);
   rerenderTreeDom(state);
 };
+
+export let changeValue = (text = "") => {
+  state.profilePage.textValue = text;
+  rerenderTreeDom(state);
+};
+
+export let subscribe = (observer) => {
+  rerenderTreeDom = observer;
+}
 
 export default state;

@@ -6,27 +6,30 @@ const Posts = (props) => {
   let newPostElem = React.createRef();
 
   const onAddPost = () => {
-    const { newPost } = props;
-
     let text = newPostElem.current.value;
-    newPost(text);
+    props.newPost(text);
+  };
+
+  const onChangeValueText = () => {
+      let text = newPostElem.current.value;
+      props.changeValue(text);
   };
 
   return (
     <div>
       <div className={styles.form_posts}>
         <h3>My posts</h3>
-        <input
+        <textarea
           ref={newPostElem}
           className={styles.text_posts}
-          type="text"
-          placeholder="your news.."
+          onChange={onChangeValueText}
+          value={props.textValue}
         />
         <input
           className={styles.btn_posts}
           onClick={onAddPost}
           type="button"
-          value="Send"
+          value="send"
         />
       </div>
       <div className={styles.posts}>

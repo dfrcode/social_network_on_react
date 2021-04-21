@@ -11,26 +11,10 @@ import Friends from "./components/Friends/Friends";
 
 import "./App.css";
 
-const newsComponent = () => {
-  return <News />;
-};
-
-const musicComponent = () => {
-  return <Music />;
-};
-
-const settingsComponent = () => {
-  return <Settings />;
-};
-
-const friendsComponent = () => {
-  return <Friends />;
-};
-
 const App = (props) => {
-  const { newPost } = props;
-  const { postsData } = props.state.profilePage;
-  const { dialogsData, messagesData } = props.state.messagesPage;
+  let { newPost, changeValue } = props;
+  let { postsData, textValue } = props.state.profilePage;
+  let { dialogsData, messagesData } = props.state.messagesPage;
 
   return (
     <BrowserRouter>
@@ -41,7 +25,14 @@ const App = (props) => {
           <div className="content">
             <Route
               path="/profile"
-              render={() => <Profile postsData={postsData} newPost={newPost} />}
+              render={() => (
+                <Profile
+                  postsData={postsData}
+                  newPost={newPost}
+                  textValue={textValue}
+                  changeValue={changeValue}
+                />
+              )}
             />
             <Route
               path="/dialogs"
@@ -52,10 +43,10 @@ const App = (props) => {
                 />
               )}
             />
-            <Route path="/news" render={newsComponent} />
-            <Route path="/musics" render={musicComponent} />
-            <Route path="/settings" render={settingsComponent} />
-            <Route path="/friends" render={friendsComponent} />
+            <Route path="/news" render={() => <News />} />
+            <Route path="/musics" render={() => <Music />} />
+            <Route path="/settings" render={() => <Settings />} />
+            <Route path="/friends" render={() => <Friends />} />
           </div>
         </div>
       </div>
